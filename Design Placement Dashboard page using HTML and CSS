@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>placement Portal - Marwadi University</title>
+    <link rel="stylesheet"   href="mystyle.css" type="text/css"/>
+</head>
+<body>
+    <header>
+        <div class="logo">Marwadi University-Rajkot</div>
+        <nav class="top-nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">login</a>
+        </nav>
+    </header>
+    <div class="container">
+    <aside class="sidebar">
+        <a href="#">🏠Home</a>
+        <a href="#">👨🏻‍🎓Placement</a>
+        <a href="#">👥Recruitment</a>
+        <a href="#">👨‍💼faculty</a>
+        <a href="#">📰news</a>
+    </aside>
+    <main class="content">
+        <h2>Recent Placements </h2>
+        <div class="cards">
+            <div class="card">
+                <img src="gpo.jpg" width="200px" height="250" alt="profile">
+                <h3>Arjun Saglani</h3>
+                <p>L&T PVT LTD</p>
+                <p>Package:💲7.5LPA</p>
+            </div>
+            <div class="card">
+            <div class="card">
+                <img src="rgp.jpg" width="200px" height="250px" alt="profile">
+                <h3>Anik patel</h3>
+                <p>L&T PVT LTD</p>
+                <p>Package:💲4.7LPA</p>
+            </div>
+            <div class="card">
+            <div class="card">
+                <img src="dcp.jpeg" width="200px" height="250px" alt="profile">
+                <h3>Jay teraiya</h3>
+                <p>L&T PVT LTD</p>
+                <p>Package:💲6.7LPA</p>
+            </div>
+        </div>
+    </main>
+    </div>
+
+    <footer>
+        &copy; 2025 Marwadi university-Rajkot
+    </footer>
+</body>
+</html>
