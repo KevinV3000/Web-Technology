@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(52, 214, 236);
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+    background-color: skyblue);
+    color: goldenrod;
+    text-align: center;
+    padding: 10px;
+}
+
+nav {
+    background-color: goldenrod;
+    text-align: center;
+    padding: 10px;
+    color:gold;
+}
+
+nav a {
+    color: goldenrod;
+    text-decoration: none;
+    margin-left: 20px;
+    background-color: white;
+    padding: 4px;
+}
+
+nav a:hover {
+    background-color: rgb(52, 214, 236);
+    text-decoration: underline;
+}
+
+section {
+    background-color:goldenrod;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgb(41, 41, 41);
+}
+
+footer {
+    background-color:goldenrod;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
