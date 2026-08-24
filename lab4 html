@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style1.css" type="text/css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Marwadi University</h1>
+        <h2>Department Of Computer Engineering</h2>
+    </header>
+
+    <nav>
+        <a href="#vision">Vision</a>
+        <a href="#mission">Mission</a>
+        <a href="#programspecificoutcome">Program Specific Outcome</a>
+        <a href="#courseoffered">Course Offered</a>
+        <a href="#toprecruiters">Top Recruiters</a>
+    </nav>
+
+    <main>
+
+        <section id="vision">
+            <h3>Vision</h3>
+
+            <p>
+                <strong>Vision</strong><br>
+                To impart quality technical education through research, innovation,
+                and teamwork for creating professionally superior and ethically strong
+                manpower that meets the global challenges of engineering industries
+                and research organizations.
+            </p>
+        </section>
+
+
+        <section id="mission">
+            <h3>Mission</h3>
+
+            <p><strong>Mission</strong></p>
+
+            <ul>
+                <li>Maintain state-of-the-art ICT enabled teaching and learning methodologies.</li>
+                <li>Enable graduates to become digital age literates, innovators, and professionals.</li>
+                <li>Provide skills, knowledge, and attitudes for success as engineers, leaders, and entrepreneurs.</li>
+                <li>Prepare graduates for lifelong learning and career challenges.</li>
+            </ul>
+        </section>
+
+
+        <section id="programspecificoutcome">
+            <h3>Program Specific Outcome</h3>
+
+            <p><strong>Program Specific Outcomes (PSOs)</strong></p>
+
+            <ol>
+                <li>
+                    Apply knowledge and competence in the design and development
+                    of computer-based systems addressing industrial and social needs.
+                </li>
+
+                <li>
+                    Adapt to emerging technological advancements including
+                    cybersecurity, AR/VR, and IoT.
+                </li>
+            </ol>
+        </section>
+
+
+        <section id="courseoffered">
+            <h3>Course Offered</h3>
+
+            <p><strong>Courses Offered</strong></p>
+
+            <ul>
+                <li>B.Tech in Computer Engineering</li>
+                <li>B.Tech in Cyber Security</li>
+                <li>M.Tech in Computer Engineering</li>
+                <li>Ph.D. in Computer Science &amp; Engineering</li>
+            </ul>
+        </section>
+
+
+        <section id="toprecruiters">
+            <h3>Top Recruiters</h3>
+
+            <p><strong>Top Recruiters</strong></p>
+
+            <ul>
+                <li>TCS</li>
+                <li>Infosys</li>
+                <li>Capgemini</li>
+                <li>Wipro</li>
+                <li>LTIMindtree</li>
+                <li>Cognizant</li>
+                <li>Reliance Industries</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; MU - DEPARTMENT OF CE
+    </footer>
+
+</body>
+
+</html>
