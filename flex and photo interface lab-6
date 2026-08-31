@@ -1,0 +1,225 @@
+Flex parent:-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box
+    {
+      border: 2px red;
+      margin: 10px;
+      background-color: gainsboro;
+      text-align: center;
+      font-weight: bold;
+    }
+    .container
+    {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      background-color: rgb(200, 30, 30);
+      height: 300px;
+      width: 100px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      align-content:space-around;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+      <div class="box">10</div>
+    </div>
+</body>
+</html>
+
+Flex child:-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox Child Properties</title>
+
+    <style>
+        .container {
+            display: flex;
+   
+            height: 400px;
+            border: 3px solid black;
+            align-items: center;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: goldenrod;
+            border: 2px solid seagreen;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+        .box1 {
+       
+            flex-grow: 1;
+            flex-basis: 200px ;
+            flex-shrink: 10;         
+        }
+         .box2 {
+            flex-grow:1;
+            align-self: flex-start;
+        }
+
+        .box3 {
+           flex-grow: 2;
+        }
+
+         .box4 {
+            flex-grow: 2;
+        }
+        .box5 {
+       
+            flex-grow: 1;
+        }
+         .box6{
+            flex-shrink: 9;
+        }
+
+        
+        
+    </style>
+</head>
+
+<body>
+
+    <h2>Flexbox Child Properties</h2>
+
+    <div class="container">
+
+        <div class="box box1">Box 1</div>
+        <div class="box box2">Box 2</div>
+        <div class="box box3">Box 3</div>
+        <div class="box box4">Box 4</div>
+        <div class="box box5">Box 5</div>
+        <div class="box box6">Box 6</div>
+
+    </div>
+
+</body>
+</html>
+
+
+index.html:-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+.loader div{ width: 20px; height: 20px;
+background-color:sandybrown;
+border-radius: 50%;
+animation: bounce 0.6s infinite alternate;
+}
+.loader{ display: flex; gap: 20px; width: 20%;
+}
+body{
+background-color: seagreen; align-content: center; height: 300px;
+}
+.loader div:nth-child(2){ animation-delay: 0.4s;
+}
+.loader div:nth-child(3){ animation-delay: 0.6s;
+}
+@keyframes bounce{ to{
+transform: translateY(-20px);
+}
+from{
+}
+}
+</style>
+</head>
+<body>
+<div class="loader">
+<div></div>
+ 
+<div></div>
+<div></div>
+</div>
+</body>
+</html>
+
+
+Photo gallery:-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    h2{
+      text-align: center;
+    }
+    .photo
+    {
+      width:20%;
+    }
+    .photo img{
+      width:100%;
+      background-color:lightgray;
+      border-radius: 5px;
+    }
+    .photo img:hover
+    {
+      transform: scale(1.05);
+    }
+    .gallery
+    {
+      display:flex;
+      gap:30px;
+      flex-wrap: wrap;
+      justify-content: center;
+
+    }
+    @media (max-width:500px) {
+        .photo
+        {
+          width: 20%;
+        }
+    }
+    @media (max-width:200px) {
+        .photo
+        {
+          width: 50%;
+        }
+    }
+  </style>
+</head>
+<body>
+  <h2>Photo Gallery</h2>
+  <div class="gallery">
+
+        <div class="photo"><img src="shaan1.jpeg" alt="Photo 1"></div>
+        <div class="photo"><img src="shaan2.jpeg" alt="Photo 2"></div>
+        <div class="photo"><img src="shaan3.jpeg" alt="Photo 3"></div>
+        <div class="photo"><img src="shaan4.jpeg" alt="Photo 4"></div>
+        <div class="photo"><img src="shaan5.jpeg" alt="Photo 5"></div>
+        <div class="photo"><img src="shaan6.jpeg" alt="Photo 6"></div>
+        <div class="photo"><img src="shaan7.jpeg" alt="Photo 7"></div>
+        <div class="photo"><img src="shaan8.jpeg" alt="Photo 8"></div>
+
+    </div>
+</body>
+</html>
