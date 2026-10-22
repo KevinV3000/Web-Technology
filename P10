@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-red-600 text-white p-4 shadow-md">
+        <h1 class="text-2xl font-bold">MyStore</h1>
+    </header>
+
+    <!-- Products Section -->
+    <main class="p-4 flex-grow bg-gray-50">
+
+        <h2 class="text-2xl text-center font-bold text-red-600 mb-6">
+            Our Products
+        </h2>
+
+        <div class="flex flex-wrap justify-center gap-4">
+
+            <!-- Product 1 -->
+            <div class="bg-white p-4 w-60 rounded-lg shadow-md">
+                <img src="laptop.jpg"
+                     alt="Laptop"
+                     class="w-full h-40 object-cover rounded">
+
+                <h3 class="text-xl font-semibold mt-2">Laptop</h3>
+                <p class="text-gray-700">Price: ₹45,999</p>
+
+                <button class="bg-red-600 hover:bg-red-700 text-white p-2 mt-2 rounded w-full transition">
+                    Buy Now
+                </button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="bg-white p-4 w-60 rounded-lg shadow-md">
+                <img src="phone.jpg"
+                     alt="Mobile"
+                     class="w-full h-40 object-cover rounded">
+
+                <h3 class="text-xl font-semibold mt-2">Mobile</h3>
+                <p class="text-gray-700">Price: ₹19,999</p>
+
+                <button class="bg-red-600 hover:bg-red-700 text-white p-2 mt-2 rounded w-full transition">
+                    Buy Now
+                </button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="bg-white p-4 w-60 rounded-lg shadow-md">
+                <img src="shoes.jpg"
+                     alt="Shoes"
+                     class="w-full h-40 object-cover rounded">
+
+                <h3 class="text-xl font-semibold mt-2">Shoes</h3>
+                <p class="text-gray-700">Price: ₹2,499</p>
+
+                <button class="bg-red-600 hover:bg-red-700 text-white p-2 mt-2 rounded w-full transition">
+                    Buy Now
+                </button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="bg-white p-4 w-60 rounded-lg shadow-md">
+                <img src="watch.jpg"
+                     alt="Watch"
+                     class="w-full h-40 object-cover rounded">
+
+                <h3 class="text-xl font-semibold mt-2">Watch</h3>
+                <p class="text-gray-700">Price: ₹3,499</p>
+
+                <button class="bg-red-600 hover:bg-red-700 text-white p-2 mt-2 rounded w-full transition">
+                    Buy Now
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-red-600 text-white text-center p-4">
+        MyStore &copy; 2026
+    </footer>
+
+</body>
+</html>
