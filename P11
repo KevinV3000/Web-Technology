@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header and Navbar</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white">
+
+    <!-- Header -->
+    <header class="bg-red-600 text-white p-4 shadow-md">
+
+        <div class="flex justify-between items-center">
+
+            <!-- Logo -->
+            <h1 class="text-2xl font-bold">
+                MyStore
+            </h1>
+
+            <!-- Navigation -->
+            <nav class="flex items-center gap-6">
+
+                <a href="#home"
+                   class="hover:text-yellow-300 transition">
+                    Home
+                </a>
+
+                <a href="#about"
+                   class="hover:text-yellow-300 transition">
+                    About
+                </a>
+
+                <!-- Products Dropdown -->
+                <div class="relative group">
+
+                    <button
+                        class="hover:text-yellow-300 transition">
+                        Products
+                    </button>
+
+                    <div class="hidden group-hover:block
+                                group-focus-within:block
+                                absolute right-0 top-full
+                                bg-white text-red-600
+                                shadow-lg rounded-md
+                                w-36 z-10 mt-2">
+
+                        <a href="#laptop"
+                           class="block p-3 hover:bg-red-100">
+                            Laptop
+                        </a>
+
+                        <a href="#mobile"
+                           class="block p-3 hover:bg-red-100">
+                            Mobile
+                        </a>
+
+                        <a href="#shoes"
+                           class="block p-3 hover:bg-red-100">
+                            Shoes
+                        </a>
+
+                    </div>
+                </div>
+
+                <a href="#contact"
+                   class="hover:text-yellow-300 transition">
+                    Contact
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+</body>
+</html>
+
+
