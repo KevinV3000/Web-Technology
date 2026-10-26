@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Knowledge Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+
+        <!-- Screen 1: Cover Page -->
+        <div id="cover-screen">
+            <div class="cover-icon">✦</div>
+
+            <h1 class="cover-title">General Knowledge Quiz</h1>
+            <p class="cover-subtitle">
+                Test your knowledge with 10 exciting questions!
+            </p>
+
+            <ul class="cover-rules">
+                <li>📚 &nbsp; 10 Multiple Choice Questions</li>
+                <li>✓ &nbsp; Select one answer per question</li>
+                <li>🏆 &nbsp; See your score at the end</li>
+            </ul>
+
+            <button class="start-btn" onclick="startQuiz()">
+                Start Quiz →
+            </button>
+        </div>
+
+        <!-- Screen 2: Quiz Questions -->
+        <div id="quiz-screen" class="hidden">
+
+            <h2 class="quiz-title">General Knowledge Quiz</h2>
+
+            <div class="progress-bar-bg">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+
+            <p id="question-counter" class="question-counter">
+                Question 1 of 10
+            </p>
+
+            <p id="question-text" class="question-text">
+                Question goes here
+            </p>
+
+            <div id="options-container" class="options-container">
+                <button class="option-btn" onclick="selectAnswer(0)"></button>
+                <button class="option-btn" onclick="selectAnswer(1)"></button>
+                <button class="option-btn" onclick="selectAnswer(2)"></button>
+                <button class="option-btn" onclick="selectAnswer(3)"></button>
+            </div>
+
+            <p id="warning-msg" class="warning-msg">
+                Please select an answer first!
+            </p>
+
+            <button id="next-btn" class="next-btn" onclick="nextQuestion()">
+                Next →
+            </button>
+        </div>
+
+        <!-- Screen 3: Result Page -->
+        <div id="result-screen" class="hidden">
+
+            <div id="result-icon" class="result-icon"></div>
+
+            <h1 class="quiz-title">Quiz Completed!</h1>
+
+            <p id="score-text" class="score-text"></p>
+
+            <div class="score-bar-bg">
+                <div id="score-bar" class="score-bar"></div>
+            </div>
+
+            <p id="result-msg" class="result-msg"></p>
+
+            <button class="restart-btn" onclick="restartQuiz()">
+                ↻ Play Again
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        // Quiz Questions
+        var questions = [
+            {
+                question: "Which planet is known as the Red Planet?",
+                options: ["Earth", "Venus", "Mars", "Jupiter"],
+                correct: 2
+            },
+            {
+                question: "How many continents are there on Earth?",
+                options: ["5", "6", "7", "8"],
+                correct: 2
+            },
+            {
+                question: "What is the capital city of France?",
+                options: ["Berlin", "Madrid", "Rome", "Paris"],
+                correct: 3
+            },
+            {
+                question: "Which is the largest ocean on Earth?",
+                options: [
+                    "Atlantic Ocean",
+                    "Indian Ocean",
+                    "Arctic Ocean",
+                    "Pacific Ocean"
+                ],
+                correct: 3
+            },
+            {
+                question: "How many sides does a hexagon have?",
+                options: ["4", "5", "6", "8"],
+                correct: 2
+            },
+            {
+                question: "Who invented the telephone?",
+                options: [
+                    "Thomas Edison",
+                    "Alexander Graham Bell",
+                    "Nikola Tesla",
+                    "Albert Einstein"
+                ],
+                correct: 1
+            },
+            {
+                question: "What is the largest country in the world by area?",
+                options: ["Canada", "China", "United States", "Russia"],
+                correct: 3
+            },
+            {
+                question: "Which gas do plants absorb from the atmosphere?",
+                options: [
+                    "Oxygen",
+                    "Nitrogen",
+                    "Carbon Dioxide",
+                    "Hydrogen"
+                ],
+                correct: 2
+            },
+            {
+                question: "How many bones are there in the adult human body?",
+                options: ["206", "198", "215", "220"],
+                correct: 0
+            },
+            {
+                question: "Which planet is the largest in our Solar System?",
+                options: ["Saturn", "Neptune", "Uranus", "Jupiter"],
+                correct: 3
+            }
+        ];
+
+        var currentQuestion = 0;
+        var score = 0;
+        var selectedAnswer = -1;
+
+        // Start Quiz
+        function startQuiz() {
+            document.getElementById("cover-screen").classList.add("hidden");
+            document.getElementById("quiz-screen").classList.remove("hidden");
+            loadQuestion();
+        }
+
+        // Load Question
+        function loadQuestion() {
+            var q = questions[currentQuestion];
+
+            document.getElementById("question-counter").innerText =
+                "Question " + (currentQuestion + 1) + " of " + questions.length;
+
+            document.getElementById("question-text").innerText = q.question;
+
+            var progress = (currentQuestion / questions.length) * 100;
+            document.getElementById("progress-bar").style.width = progress + "%";
+
+            var buttons = document.querySelectorAll(".option-btn");
+
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].innerText = q.options[i];
+                buttons[i].classList.remove("selected");
+            }
+
+            document.getElementById("warning-msg").style.display = "none";
+            selectedAnswer = -1;
+
+            if (currentQuestion === questions.length - 1) {
+                document.getElementById("next-btn").innerText = "Submit ✓";
+            } else {
+                document.getElementById("next-btn").innerText = "Next →";
+            }
+        }
+
+        // Select Answer
+        function selectAnswer(index) {
+            selectedAnswer = index;
+
+            var buttons = document.querySelectorAll(".option-btn");
+
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("selected");
+            }
+
+            buttons[index].classList.add("selected");
+
+            document.getElementById("warning-msg").style.display = "none";
+        }
+
+        // Next Question / Submit
+        function nextQuestion() {
+            if (selectedAnswer === -1) {
+                document.getElementById("warning-msg").style.display = "block";
+                return;
+            }
+
+            if (selectedAnswer === questions[currentQuestion].correct) {
+                score++;
+            }
+
+            currentQuestion++;
+
+            if (currentQuestion === questions.length) {
+                showResult();
+            } else {
+                loadQuestion();
+            }
+        }
+
+        // Show Result
+        function showResult() {
+            document.getElementById("quiz-screen").classList.add("hidden");
+            document.getElementById("result-screen").classList.remove("hidden");
+
+            document.getElementById("progress-bar").style.width = "100%";
+
+            document.getElementById("score-text").innerText =
+                "Your Score: " + score + " / " + questions.length;
+
+            var percentage = (score / questions.length) * 100;
+
+            setTimeout(function () {
+                document.getElementById("score-bar").style.width =
+                    percentage + "%";
+            }, 100);
+
+            var icon;
+            var message;
+
+            if (score === 10) {
+                icon = "🏆";
+                message = "Perfect Score! Outstanding performance!";
+            } else if (score >= 8) {
+                icon = "🎉";
+                message = "Excellent! You really know your stuff!";
+            } else if (score >= 6) {
+                icon = "👏";
+                message = "Good job! A bit more practice and you'll ace it!";
+            } else if (score >= 4) {
+                icon = "💪";
+                message = "Not bad! Keep studying and try again!";
+            } else {
+                icon = "📚";
+                message = "Keep practicing! You'll do better next time!";
+            }
+
+            document.getElementById("result-icon").innerText = icon;
+            document.getElementById("result-msg").innerText = message;
+        }
+
+        // Restart Quiz
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            selectedAnswer = -1;
+
+            document.getElementById("result-screen").classList.add("hidden");
+            document.getElementById("cover-screen").classList.remove("hidden");
+
+            document.getElementById("progress-bar").style.width = "0%";
+            document.getElementById("score-bar").style.width = "0%";
+        }
+    </script>
+
+</body>
+</html>
